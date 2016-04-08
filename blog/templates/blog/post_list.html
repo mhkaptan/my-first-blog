@@ -8,15 +8,22 @@
     	<div>
     		<h1><a href="">Kaptan`s Test Flight</a></h1>
     	</div>
+    
+    {% for post in posts%}
 
     	<div>
-    		<p>published: 04.07.2016, 5:51</p>
-    		<h2><a href="">First Journey Note</a></h2>
-    		<p>Baris is a got</p>
+    	    
+    	    <p>published: {{ post.published_date}}</p>
+    	    <h1><a href="">{{ post.title }} </a></h1>
+    	    <p>{{ post.text|linebreaks  }}</p>
+
     	</div>
+
+    {% endfor %}
+    	
     </body>
 
-
+    
 
     <body>
     	<p>Calisiyo!</p>
